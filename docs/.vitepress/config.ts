@@ -1,9 +1,20 @@
 import { defineConfig } from "vitepress";
 
+const siteDescription = "从零学习 crewAI，多智能体原理、源码拆解与 TypeScript 实战教程";
+
 export default defineConfig({
   title: "crewAI 中文教程",
-  description: "面向本科毕业生的 multi Agent 工程教程",
+  description: siteDescription,
   lang: "zh-CN",
+  head: [
+    ["meta", { property: "og:title", content: "crewAI 中文教程" }],
+    ["meta", { property: "og:description", content: siteDescription }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:url", content: "https://crewai-tutorial-plum.vercel.app" }],
+    ["meta", { name: "twitter:card", content: "summary" }],
+    ["meta", { name: "twitter:title", content: "crewAI 中文教程" }],
+    ["meta", { name: "twitter:description", content: siteDescription }]
+  ],
   cleanUrls: true,
   markdown: {
     theme: {
