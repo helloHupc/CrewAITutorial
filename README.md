@@ -1,26 +1,47 @@
 # crewAI 中文教程
 
-一个完整可运行的 VitePress 中文教学项目，主题是“从零到一实现一个 multi Agent”。教程参考 crewAI 官方仓库与官方文档，围绕 Agent、Task、Crew、Process、Flow、Tool、Memory、Knowledge 等核心概念展开，并提供一个 Node.js + TypeScript + React 的最终 Demo。
+一个面向中文读者的 crewAI 入门与实战教程。项目把 crewAI 的核心概念、架构设计和执行链路拆成循序渐进的学习路径，并提供一个可运行的 TypeScript multi Agent Demo，帮助读者从零开始理解并实现一个简化版多智能体系统。
 
-站点源码地址：
+教程站点源码：
 
 [https://github.com/helloHupc/CrewAITutorial](https://github.com/helloHupc/CrewAITutorial)
 
-## Demo 截图
+## 项目截图
 
-> 截图位置预留。项目推送后，可手动将截图放入 `docs/public/screenshots/`，再替换下面的图片路径。
+### 教程站点首页
 
 ![教程站点首页](docs/public/screenshots/home.png)
 
+### multi Agent Demo 工作台
+
 ![multi Agent Demo 工作台](docs/public/screenshots/demo-workbench.png)
+
+## 适合谁阅读
+
+本教程适合已经具备基础编程能力，并希望系统理解 multi Agent 工程实现的读者：
+
+- 想学习 crewAI 但不想只停留在概念介绍。
+- 想理解 Agent、Task、Crew、Flow、Tool、Memory 等模块如何协作。
+- 想通过小 Demo 逐步掌握多智能体系统的执行链路。
+- 想用 Node.js、TypeScript、React 实现一个可运行的教学版 multi Agent 项目。
+
+## 可以学到什么
+
+- crewAI 的核心抽象：Agent、Task、Crew、Process、Flow、Tool、Memory、Knowledge。
+- Crew 与 Flow 的职责边界：自主协作与流程控制如何配合。
+- 从 `kickoff` 入口理解任务校验、上下文传递、Agent 执行和结果汇总。
+- 如何设计渐进式 Demo，让复杂系统从最小 Agent 一步步演化到完整 Crew。
+- 如何实现一个前后端可运行的 multi Agent 报告生成工作台。
 
 ## 项目内容
 
-- crewAI 核心概念：Agent、Task、Crew、Process、Flow、Tool、Memory、Knowledge。
-- 官方仓库和文档导向的源码阅读路线。
-- 5 个由浅入深的 TypeScript 小 Demo。
-- 一个可运行的最终项目：Node.js 后端 + React 前端。
-- Mermaid 架构图、流程图、时序图、目录树、表格、练习题和扩展建议。
+| 模块 | 内容 |
+| --- | --- |
+| 教程站点 | 基于 VitePress，包含原理讲解、源码拆解、流程图、时序图、表格和练习。 |
+| 渐进式 Demo | 5 个 TypeScript 小 Demo，从最小 Agent 到 Flow 状态机。 |
+| 最终项目后端 | Express + TypeScript，实现 Agent、Task、Crew、Tool、Flow 和 LLM 适配。 |
+| 最终项目前端 | React + Vite，实现主题输入、执行事件、任务输出和最终报告展示。 |
+| Mock LLM | 默认无需 API Key，即可离线跑通完整 Demo。 |
 
 ## 项目结构
 
@@ -42,7 +63,9 @@
 └── README.md
 ```
 
-## 安装依赖
+## 快速开始
+
+安装依赖：
 
 ```bash
 npm install
@@ -50,7 +73,7 @@ npm install --prefix examples/final-multi-agent/backend
 npm install --prefix examples/final-multi-agent/frontend
 ```
 
-## 启动教程站点
+启动教程站点：
 
 ```bash
 npm run docs:dev
@@ -62,9 +85,7 @@ npm run docs:dev
 http://127.0.0.1:5173/
 ```
 
-## 启动最终 Demo
-
-开两个终端。
+## 运行最终 Demo
 
 终端 1：启动后端。
 
@@ -78,7 +99,7 @@ npm run demo:backend
 npm run demo:frontend
 ```
 
-访问：
+访问前端工作台：
 
 ```txt
 http://127.0.0.1:5174/
@@ -90,11 +111,11 @@ http://127.0.0.1:5174/
 http://127.0.0.1:8787/api/health
 ```
 
-默认使用 Mock LLM，不需要 API Key。
+默认使用 Mock LLM，不需要 API Key。页面提交主题后，后端会创建资料研究员、系统分析师、技术写作者三个 Agent，并按顺序执行调研、分析和成稿任务。
 
 ## 接入真实 LLM
 
-复制环境变量模板：
+复制后端环境变量模板：
 
 ```bash
 cp examples/final-multi-agent/backend/.env.example examples/final-multi-agent/backend/.env
@@ -109,7 +130,7 @@ LLM_BASE_URL=https://api.openai.com/v1
 LLM_MODEL=gpt-4.1-mini
 ```
 
-只要供应商兼容 OpenAI Chat Completions 格式，通常都可以接入。
+只要模型服务兼容 OpenAI Chat Completions 格式，通常都可以接入。
 
 ## 构建验证
 
@@ -119,11 +140,29 @@ npm --prefix examples/final-multi-agent/backend run build
 npm --prefix examples/final-multi-agent/frontend run build
 ```
 
+## 学习路线
+
+推荐按下面顺序阅读：
+
+1. `docs/guide.md`：了解教程路线和最终目标。
+2. `docs/core/`：建立 crewAI 核心概念和架构心智模型。
+3. `docs/source/`：理解官方仓库阅读路线和执行链路。
+4. `docs/demos/`：从最小 Agent 开始完成 5 个渐进式 Demo。
+5. `docs/final/`：阅读最终项目的后端、前端、运行和扩展方式。
+
 ## 参与讨论与修正
 
-如果发现教程概念解释不准确、代码无法运行、页面展示异常、或 crewAI 官方版本变化导致内容过期，欢迎提交 Issue 或 Pull Request。
+欢迎通过 Issue 或 Pull Request 参与改进：
 
-也欢迎补充新的 Demo、练习题、截图和扩展章节。
+- 修正教程中的概念错误或过期内容。
+- 补充更清晰的示例、图表和练习。
+- 修复代码运行问题或页面展示问题。
+- 扩展最终 Demo，例如接入真实搜索、记忆系统、Reviewer Agent 或实时事件推送。
+
+## 参考资料
+
+- crewAI 官方仓库：[https://github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
+- crewAI 官方文档：[https://docs.crewai.com](https://docs.crewai.com)
 
 ## License
 
