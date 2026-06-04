@@ -28,3 +28,4 @@ pnpm-debug.log*
 # Temporary files
 .cache/
 .tmp/
+.vercel
