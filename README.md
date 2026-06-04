@@ -163,6 +163,12 @@ npm --prefix examples/final-multi-agent/frontend run build
 - crewAI 官方仓库：[https://github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
 - crewAI 官方文档：[https://docs.crewai.com](https://docs.crewai.com)
 
+## 致谢
+
+感谢 [Linux Do](https://linux.do) 社区的交流与启发。
+
+学AI，上L站。
+
 ## License
 
 MIT
