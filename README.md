@@ -2,19 +2,18 @@
 
 一个面向中文读者的 crewAI 入门与实战教程。项目把 crewAI 的核心概念、架构设计和执行链路拆成循序渐进的学习路径，并提供一个可运行的 TypeScript multi Agent Demo，帮助读者从零开始理解并实现一个简化版多智能体系统。
 
-教程站点源码：
-
-[https://github.com/helloHupc/CrewAITutorial](https://github.com/helloHupc/CrewAITutorial)
 
 ## 项目截图
 
 ### 教程站点首页
 
-![教程站点首页](docs/public/screenshots/home.png)
+<img width="2930" height="1596" alt="image" src="https://github.com/user-attachments/assets/0d81169c-3bc6-4f0a-bb5e-4ff28503ab07" />
+
 
 ### multi Agent Demo 工作台
 
-![multi Agent Demo 工作台](docs/public/screenshots/demo-workbench.png)
+<img width="2612" height="1724" alt="image" src="https://github.com/user-attachments/assets/e3b1f967-541e-4113-979f-49bc472b30d0" />
+
 
 ## 适合谁阅读
 
