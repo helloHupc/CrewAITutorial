@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+examples/final-multi-agent/backend/dist/
+examples/final-multi-agent/frontend/dist/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Temporary files
+.cache/
+.tmp/
